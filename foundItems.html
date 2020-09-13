@@ -1,0 +1,9 @@
+<div>
+    <ul id='foundItemList'>
+        <li ng-repeat="foundItem in narrowIt.items">
+            {{foundItem.name}}, {{foundItem.short_name}}, {{foundItem.description}}
+            <button class="btn btn-default" ng-click="narrowIt.onRemove({i: $index});"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Don't want this one!</button>
+        </li>
+    </ul>
+    <div ng-if="narrowIt.isEmptyItems()" class="alert alert-info">Nothing found</div>
+</div>
